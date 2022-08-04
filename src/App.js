@@ -1,8 +1,11 @@
+import{ useState } from 'react'
+
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  let count = 0
+  // let count = 0
+  const [count, setCount] = useState(0) 
   return (
     <div className="App">
       <header className="App-header">
@@ -12,9 +15,10 @@ function App() {
           You click the button {count} time.
         </p>
         <button onClick={() => {
-          console.log('I click the buttton')
-          count = count + 1
-        }}>Click Me</button>
+          console.log('I click the buttton' + count)
+          // count = count + 1
+          setCount(count + 1)
+        }}>Add one</button>
       </header>
     </div>
   );
